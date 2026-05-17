@@ -1,0 +1,653 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About - MOMENTUM Performance Systems</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Configuration -->
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "status-error": "#FF3E3E",
+              "on-tertiary-container": "#5f5e5e",
+              "on-primary": "#00363a",
+              "surface-container": "#201f1f",
+              primary: "#dbfcff",
+              "neon-green": "#CCFF00",
+              "on-secondary-container": "#556d00",
+              "on-primary-fixed": "#002022",
+              outline: "#849495",
+              "surface-tint": "#00dbe9",
+              "surface-dim": "#131313",
+              "tertiary-fixed": "#e5e2e1",
+              "on-tertiary": "#313030",
+              "secondary-container": "#c3f400",
+              "inverse-on-surface": "#313030",
+              "surface-container-high": "#2a2a2a",
+              "surface-bright": "#3a3939",
+              "primary-container": "#00f0ff",
+              "on-secondary-fixed": "#161e00",
+              "on-tertiary-fixed": "#1c1b1b",
+              "surface-variant": "#353534",
+              "primary-fixed": "#7df4ff",
+              "on-tertiary-fixed-variant": "#474746",
+              "surface-container-lowest": "#0e0e0e",
+              "electric-blue": "#00F0FF",
+              "error-container": "#93000a",
+              "surface-container-highest": "#353534",
+              "on-surface": "#e5e2e1",
+              "on-error": "#690005",
+              surface: "#131313",
+              "charcoal-grey": "#121212",
+              "tertiary-fixed-dim": "#c8c6c5",
+              "on-background": "#e5e2e1",
+              "inverse-primary": "#006970",
+              "on-secondary": "#283500",
+              "secondary-fixed-dim": "#abd600",
+              "outline-variant": "#3b494b",
+              "primary-fixed-dim": "#00dbe9",
+              "tertiary-container": "#dcd9d8",
+              "on-primary-container": "#006970",
+              background: "#131313",
+              "pure-black": "#000000",
+              "surface-container-low": "#1c1b1b",
+              "on-secondary-fixed-variant": "#3c4d00",
+              "on-error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#004f54",
+              "on-surface-variant": "#b9cacb",
+              "inverse-surface": "#e5e2e1",
+              secondary: "#ffffff",
+              "secondary-fixed": "#c3f400",
+              error: "#ffb4ab",
+              tertiary: "#f8f5f5",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "container-max": "1280px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "gutter-desktop": "32px",
+              "gutter-mobile": "16px",
+              base: "8px",
+            },
+            fontFamily: {
+              "display-lg-mobile": ["Montserrat"],
+              "label-caps": ["Inter"],
+              "headline-xl": ["Montserrat"],
+              "display-lg": ["Montserrat"],
+              "body-md": ["Inter"],
+              "headline-md": ["Montserrat"],
+              "body-lg": ["Inter"],
+            },
+            fontSize: {
+              "display-lg-mobile": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "900",
+                },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-xl": [
+                "40px",
+                { lineHeight: "48px", fontWeight: "800" },
+              ],
+              "display-lg": [
+                "80px",
+                {
+                  lineHeight: "88px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "900",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .material-symbols-outlined.fill {
+        font-variation-settings: "FILL" 1;
+      }
+
+      /* Subtle image desaturation trick for cards */
+      .trainer-card img {
+        filter: grayscale(80%) contrast(1.2);
+        transition: all 0.4s ease;
+      }
+      .trainer-card:hover img {
+        filter: grayscale(0%) contrast(1);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-pure-black text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-electric-blue selection:text-pure-black"
+  >
+    <!-- Top Navigation Bar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-white/10 shadow-xl"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <!-- Brand -->
+        <a
+          class="font-display-lg-mobile text-headline-md font-black tracking-tighter text-electric-blue"
+          href="/"
+          >MOMENTUM</a
+        >
+        <!-- Desktop Links -->
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-neon-green transition-all duration-300"
+            href="#"
+            >Features</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-neon-green transition-all duration-300"
+            href="#"
+            >Solutions</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-neon-green transition-all duration-300"
+            href="#"
+            >Pricing</a
+          >
+          <!-- Active State Applied Here based on JSON logic -->
+          <a
+            class="font-body-md text-body-md text-electric-blue font-bold border-b-2 border-electric-blue pb-1 hover:text-neon-green transition-all duration-300 scale-95"
+            href="#"
+            >About</a
+          >
+        </div>
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex gap-4 items-center">
+          <a
+            class="font-body-md text-body-md text-neon-green border-2 border-neon-green px-4 py-2 hover:bg-neon-green hover:text-pure-black transition-colors font-bold uppercase tracking-wider"
+            href="#"
+            >Login</a
+          >
+          <a
+            class="font-body-md text-body-md bg-electric-blue text-pure-black px-6 py-2 uppercase font-bold hover:shadow-[0_0_15px_#00F0FF] transition-all"
+            href="#"
+            >Join Now</a
+          >
+        </div>
+        <!-- Mobile Menu Toggle (Visual Only) -->
+        <button class="md:hidden text-electric-blue">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </nav>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[716px] flex items-center justify-center overflow-hidden border-b border-white/10"
+      >
+        <!-- Background Image with highly detailed prompt -->
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Hero Background"
+            class="w-full h-full object-cover opacity-40"
+            data-alt="A dramatic, low-angle shot of a muscular elite athlete performing a powerful kettlebell swing in a dark, cavernous industrial gym. The scene is lit by harsh, high-contrast overhead spotlights cutting through atmospheric smoke, casting deep shadows against a pure black background. Subtle reflections of neon green and electric blue light glint off the heavy iron weights and slick floor. The overall mood is intense, kinetic, and raw, perfectly capturing a high-performance fitness aesthetic."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRWzSrfKzP9sr2WbV9BcrTCUfnF72MmB-Qf65HcVVD7KKXSTieiA0oxgLsBn8oFaQ3oIoU3d8wSpKdx134wRRVeWdnOrR8_yjD2yGnslaadJ4fkvlqyofmpr3c3MulKgQDvEFn5Is97cSgvncd9eFN9NSnsJjJDMOtEJ2iM4rRTYhx_AZQnWY7a8ZATSANtIlpimSQU-2Qgvzf1x_Vp_rnz0aQNSWXJ25aJW3Ry-sC2W2xOXr-F_E-naVV_jZiIuCZDas7t1bhjqIR"
+          />
+          <!-- Glowing Aura Effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-pure-black via-pure-black/80 to-transparent"
+          ></div>
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-electric-blue/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+        >
+          <span
+            class="font-label-caps text-label-caps text-neon-green tracking-widest uppercase mb-4 block"
+            >Our Origin</span
+          >
+          <h1
+            class="font-display-lg text-display-lg-mobile md:text-display-lg text-white font-black uppercase mb-6 leading-tight"
+          >
+            Redefining <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-primary-fixed"
+              >Human Limits</span
+            >
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+          >
+            Momentum Fitness is not just a facility; it's a crucible for
+            high-performance athletics. We fuse cutting-edge sport science with
+            relentless intensity to engineer elite outcomes.
+          </p>
+        </div>
+      </section>
+      <!-- Our Mission Section (Asymmetric Layout) -->
+      <section
+        class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-b border-white/5"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop items-center"
+        >
+          <div class="md:col-span-5 relative">
+            <!-- Image -->
+            <img
+              alt="Mission Image"
+              class="w-full h-auto border border-white/10 rounded-DEFAULT shadow-[0_0_30px_rgba(0,240,255,0.1)] grayscale contrast-125"
+              data-alt="A close-up, high-contrast portrait of a determined athlete's face, dripping with sweat under harsh studio lighting. The background is completely pitch black. The lighting emphasizes the raw texture of their skin and the intense focus in their eyes. A very subtle hint of electric blue rim light outlines their profile, integrating the brand's premium, dark, and energetic aesthetic into the gritty realism of the workout."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuApu1dyPTI2oUujTaseSzbJwM5ulniu466q3VZLbS4BT1W0uhIE3v3hbP_X1wrR8rdotHAzbcMmn_BJ8mYDAcsaKaZU7ZY1NBS3hjJYal5Zkhuk3tTZ5nuiNcDuXVVwPVM38jsVKsja7b4GqqEstnTKTfxqEGvbs_yKWlWJpgZCmuXBPEzyuC9dHtuGTM_m67GKt2vVk4LhqMC76BRrKIRXHG_eSmH5F1vm9qpRJMPTebT34HVaMrIUS4A0xIzX_H0Z83kDJaUmq2oX"
+            />
+            <!-- Decorative Element -->
+            <div
+              class="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-neon-green"
+            ></div>
+          </div>
+          <div class="md:col-span-6 md:col-start-7 space-y-8 mt-12 md:mt-0">
+            <h2
+              class="font-headline-xl text-headline-xl text-white font-black uppercase tracking-tight"
+            >
+              The Physics <br />
+              of <span class="text-electric-blue">Progress</span>
+            </h2>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+            >
+              At Momentum, we believe that kinetic potential is universal, but
+              realizing it requires precision. Our mission is to strip away the
+              noise of the fitness industry and provide an environment built
+              purely on empirical data, world-class coaching, and unrelenting
+              effort.
+            </p>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+            >
+              We don't do fads. We do physiology. We build structural integrity,
+              explosive power, and metabolic dominance through systems tested on
+              professional stages worldwide.
+            </p>
+            <div class="pt-4 flex gap-6">
+              <div class="border-l-2 border-neon-green pl-4">
+                <span
+                  class="block font-display-lg-mobile text-headline-xl text-white font-black"
+                  >15+</span
+                >
+                <span
+                  class="font-label-caps text-label-caps text-on-surface-variant uppercase"
+                  >Years Experience</span
+                >
+              </div>
+              <div class="border-l-2 border-electric-blue pl-4">
+                <span
+                  class="block font-display-lg-mobile text-headline-xl text-white font-black"
+                  >10k</span
+                >
+                <span
+                  class="font-label-caps text-label-caps text-on-surface-variant uppercase"
+                  >Athletes Optimized</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Science of Performance (Bento Grid) -->
+      <section class="py-24 md:py-32 bg-charcoal-grey border-b border-white/5">
+        <div
+          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+        >
+          <div class="text-center mb-16">
+            <span
+              class="font-label-caps text-label-caps text-neon-green tracking-widest uppercase mb-2 block"
+              >Methodology</span
+            >
+            <h2
+              class="font-headline-xl text-headline-xl text-white font-black uppercase"
+            >
+              The Science of Performance
+            </h2>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter-mobile md:gap-gutter-desktop"
+          >
+            <!-- Card 1 -->
+            <div
+              class="bg-surface border border-white/5 p-8 relative overflow-hidden group hover:border-electric-blue/50 transition-colors duration-500 flex flex-col justify-between h-full min-h-[300px]"
+            >
+              <div
+                class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+              >
+                <span
+                  class="material-symbols-outlined text-[80px] text-electric-blue"
+                  >biotech</span
+                >
+              </div>
+              <div>
+                <div
+                  class="w-12 h-12 bg-charcoal-grey border border-white/10 flex items-center justify-center mb-6"
+                >
+                  <span class="material-symbols-outlined text-electric-blue"
+                    >analytics</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-md text-headline-md text-white font-bold mb-4 uppercase tracking-wide"
+                >
+                  Biometric Profiling
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  We establish baseline metrics through comprehensive
+                  physiological testing, ensuring every protocol is engineered
+                  for your unique structural makeup.
+                </p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-surface border border-white/5 p-8 relative overflow-hidden group hover:border-neon-green/50 transition-colors duration-500 flex flex-col justify-between h-full min-h-[300px]"
+            >
+              <div
+                class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+              >
+                <span
+                  class="material-symbols-outlined text-[80px] text-neon-green"
+                  >bolt</span
+                >
+              </div>
+              <div>
+                <div
+                  class="w-12 h-12 bg-charcoal-grey border border-white/10 flex items-center justify-center mb-6"
+                >
+                  <span class="material-symbols-outlined text-neon-green"
+                    >fitness_center</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-md text-headline-md text-white font-bold mb-4 uppercase tracking-wide"
+                >
+                  Kinetic Load Tracking
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Velocity-based training and real-time output monitoring
+                  guarantee precise neuromuscular adaptation, preventing
+                  overtraining while maximizing power yield.
+                </p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-surface border border-white/5 p-8 relative overflow-hidden group hover:border-electric-blue/50 transition-colors duration-500 flex flex-col justify-between h-full min-h-[300px]"
+            >
+              <div
+                class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+              >
+                <span
+                  class="material-symbols-outlined text-[80px] text-electric-blue"
+                  >vital_signs</span
+                >
+              </div>
+              <div>
+                <div
+                  class="w-12 h-12 bg-charcoal-grey border border-white/10 flex items-center justify-center mb-6"
+                >
+                  <span class="material-symbols-outlined text-electric-blue"
+                    >healing</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-md text-headline-md text-white font-bold mb-4 uppercase tracking-wide"
+                >
+                  Accelerated Recovery
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Integration of cold-water immersion, pneumatic compression,
+                  and targeted nutritional supplementation to radically reduce
+                  systemic inflammation between cycles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Elite Trainers Section (Grid Layout) -->
+      <section
+        class="py-24 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+        >
+          <div>
+            <span
+              class="font-label-caps text-label-caps text-electric-blue tracking-widest uppercase mb-2 block"
+              >The Vanguard</span
+            >
+            <h2
+              class="font-headline-xl text-headline-xl text-white font-black uppercase"
+            >
+              Elite Roster
+            </h2>
+          </div>
+          <a
+            class="font-label-caps text-label-caps text-neon-green hover:text-white transition-colors flex items-center gap-2 border-b border-neon-green pb-1"
+            href="#"
+          >
+            VIEW FULL ROSTER
+            <span class="material-symbols-outlined text-[16px]"
+              >arrow_forward</span
+            >
+          </a>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-mobile md:gap-gutter-desktop"
+        >
+          <!-- Trainer 1 -->
+          <div
+            class="trainer-card bg-charcoal-grey border border-white/5 group cursor-pointer relative overflow-hidden"
+          >
+            <div class="aspect-[3/4] overflow-hidden bg-surface relative">
+              <img
+                alt="Trainer Headshot"
+                class="w-full h-full object-cover object-top"
+                data-alt="A striking, professional headshot of a rugged male fitness coach in a dark charcoal environment. The lighting is moody and high-contrast, casting a slight shadow over half his face while illuminating his intense, focused expression. He wears a minimal black athletic shirt. A faint rim light separates him from the pitch-black background, emphasizing his strong jawline and muscular build in line with a premium athletic brand."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSWFioLNT751jGNLTdpBdTlUEgQ-JogBzFLFJG152DUcyWzLG1vGm2lScwNSCAgs-7-IGTLHDDJFmzjrJFRWgFzURBzN30JWSsIO5z80mMFqt8rnCQv-gn66BqUdRGo0ogz3uM2ea0rYvHuznzoYoNR9aXtwobZ54ujkVjbmtaEX_HuAyZ1NiCbErpvNSnZpKgaZhdLof6iEUkxoBjiNAhJf_Si9vGv9HB7Q9DkXxBPVwFhiEncpyObdliN27tgQo3mbHS7AVfGpU1"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"
+              ></div>
+            </div>
+            <div
+              class="p-6 relative z-10 -mt-12 bg-charcoal-grey/90 backdrop-blur-sm border-t border-white/10"
+            >
+              <h4
+                class="font-headline-md text-headline-md text-white font-bold uppercase mb-1"
+              >
+                Marcus Vance
+              </h4>
+              <p class="font-label-caps text-label-caps text-electric-blue">
+                Head of Strength
+              </p>
+            </div>
+          </div>
+          <!-- Trainer 2 -->
+          <div
+            class="trainer-card bg-charcoal-grey border border-white/5 group cursor-pointer relative overflow-hidden"
+          >
+            <div class="aspect-[3/4] overflow-hidden bg-surface relative">
+              <img
+                alt="Trainer Headshot"
+                class="w-full h-full object-cover object-top"
+                data-alt="A powerful, high-contrast portrait of a female athletic trainer looking directly at the camera with unwavering confidence. She has a strong, sculpted physique and is set against a dark, textured grey background. Studio lighting highlights the sweat on her skin and the determination in her eyes. The color palette is almost monochromatic, relying on deep blacks and greys to convey a serious, elite performance atmosphere."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnidRHd33pBxvbCeo8eX6Ef2lEaspXnpTG9ySzbf_6B-BP9xnkK_mh1g0fzKeverbFvX6bG6bgjrJpZ3ingTMTGrwczog5T0SmnY913pp1ctA6AjJWvws7QbPa8pKFq9n6cMJLdhWnNxWAibAi-u6xyckeEcoJch9FJIZ4RCGNjhuudFpOXjqrQK9mRn95tDfIpuF11HRk_3SJ5Pwj-bNiZ6jyiGKFoqDvVx6XX_mJIjdH5IrcyPqV3t2kirnxJa1uKPltlaSihcLQ"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"
+              ></div>
+            </div>
+            <div
+              class="p-6 relative z-10 -mt-12 bg-charcoal-grey/90 backdrop-blur-sm border-t border-white/10"
+            >
+              <h4
+                class="font-headline-md text-headline-md text-white font-bold uppercase mb-1"
+              >
+                Elena Rostova
+              </h4>
+              <p class="font-label-caps text-label-caps text-neon-green">
+                Performance Director
+              </p>
+            </div>
+          </div>
+          <!-- Trainer 3 -->
+          <div
+            class="trainer-card bg-charcoal-grey border border-white/5 group cursor-pointer relative overflow-hidden"
+          >
+            <div class="aspect-[3/4] overflow-hidden bg-surface relative">
+              <img
+                alt="Trainer Headshot"
+                class="w-full h-full object-cover object-top"
+                data-alt="An intense, shadowed headshot of a male sports conditioning coach. He is positioned in profile, looking off-camera, illuminated by a single, harsh key light that creates dramatic contrast against a completely black void. The lighting picks up the fine details of his athletic wear and the intensity of his posture. The overall visual tone is gritty, focused, and deeply embedded in a high-tech, high-effort aesthetic."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPBw-5sy9rnCq7B1tzPplME0zA5W_hUxS0kiyZyyfNkIPY6b481s0jPUl-ZGfKVcC10Zwcar1xIbMYXRMN69kPIPit9Tg3ggI-CV1G-EAfP5TDJmz8nIfcaNAVEMxy3nbW7FFr62QfUgSNzy63yrX-sfKP-lHMoy-R3wm1QxPCiDJ1u0Bc0Zw4UPrWuF3jU93lDo9T4n3kGZ8guRf9uCVBR4i5Aw6ynvzk_gCgjFGZwtBjLTNwjRTEjefs7kMFQIUziJclxAIKrJaj"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"
+              ></div>
+            </div>
+            <div
+              class="p-6 relative z-10 -mt-12 bg-charcoal-grey/90 backdrop-blur-sm border-t border-white/10"
+            >
+              <h4
+                class="font-headline-md text-headline-md text-white font-bold uppercase mb-1"
+              >
+                Julian Hayes
+              </h4>
+              <p class="font-label-caps text-label-caps text-electric-blue">
+                Metabolic Specialist
+              </p>
+            </div>
+          </div>
+          <!-- Trainer 4 -->
+          <div
+            class="trainer-card bg-charcoal-grey border border-white/5 group cursor-pointer relative overflow-hidden"
+          >
+            <div class="aspect-[3/4] overflow-hidden bg-surface relative">
+              <img
+                alt="Trainer Headshot"
+                class="w-full h-full object-cover object-top"
+                data-alt="A striking portrait of a female sports scientist and trainer in a dark, atmospheric studio setting. She is lit by a cool, slightly blue-tinted light that emphasizes the technical, scientific side of the brand's performance aesthetic. Her expression is analytical and authoritative. The background fades into a deep charcoal, ensuring the focus remains entirely on her sharp, professional presence."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl0ilGLY7MlA9IDebWqP7uSzEZvR5upbtV2VgQ5LDf-A_z_S8QIDB8NHc88Xy9skI3aQ3_8bZz5w-Xya_uSR3P0-GDT2J3YWpfon6-xU-ehOIBxykHozm34R5D9bnDLY6luhrDhtCPaUkEsDh0Zk0x5f8xI2S4aipAYhEWEEgxES5lgDt3T57MJ9hLu_NXufeU0wecN0Qjdr_K1VqASQj-4BDkIOGkTqlNPYabSoHJiuj3I9QZkFDNnUkldGyRVhtmLAaGOxLMaPdM"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent opacity-80"
+              ></div>
+            </div>
+            <div
+              class="p-6 relative z-10 -mt-12 bg-charcoal-grey/90 backdrop-blur-sm border-t border-white/10"
+            >
+              <h4
+                class="font-headline-md text-headline-md text-white font-bold uppercase mb-1"
+              >
+                Dr. Sarah Lin
+              </h4>
+              <p class="font-label-caps text-label-caps text-neon-green">
+                Biomechanics Lead
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Component from JSON -->
+    <footer
+      class="w-full relative bottom-0 bg-pure-black border-t border-white/10"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center py-12 px-margin-desktop max-w-container-max mx-auto gap-8 md:gap-0"
+      >
+        <!-- Brand -->
+        <div
+          class="font-headline-md text-headline-md font-black text-electric-blue"
+        >
+          MOMENTUM
+        </div>
+        <!-- Copyright -->
+        <div
+          class="font-body-md text-body-md text-on-surface-variant order-last md:order-none text-center md:text-left"
+        >
+          © 2024 MOMENTUM Performance Systems. All rights reserved.
+        </div>
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center gap-6">
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-electric-blue underline transition-all transition-opacity duration-200 uppercase tracking-wider"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-electric-blue underline transition-all transition-opacity duration-200 uppercase tracking-wider"
+            href="#"
+            >Terms of Service</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-electric-blue underline transition-all transition-opacity duration-200 uppercase tracking-wider"
+            href="#"
+            >Cookies</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-electric-blue underline transition-all transition-opacity duration-200 uppercase tracking-wider"
+            href="#"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

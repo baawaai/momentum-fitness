@@ -42,6 +42,14 @@ export const FEATURES = [
   },
 ];
 
+/** Highlight metrics for the About page hero strip. */
+export const ABOUT_STATS = [
+  { label: "Training floor", value: "18K sq ft" },
+  { label: "Established", value: "2018" },
+  { label: "Classes / week", value: "50+" },
+  { label: "Coach staff", value: "12+" },
+] as const;
+
 export const ABOUT_VALUES = [
   {
     title: "Performance First",
@@ -72,7 +80,7 @@ export const FOOTER_LINKS = {
     { label: "Contact", href: "/contact" },
   ],
   dashboards: [
-    { label: "Member Portal", href: "/dashboard/user" },
+    { label: "Member Portal", href: "/login" },
     { label: "Admin Console", href: "/dashboard/admin" },
   ],
 };

@@ -81,7 +81,7 @@ export function Navbar({ variant = "marketing" }: NavbarProps) {
           <div className="flex items-center gap-3">
 
             <Link
-              href="/dashboard/user"
+              href="/login"
               className="hidden rounded-sm border border-neon-green/50 px-4 py-2 font-display text-xs font-bold uppercase tracking-wider text-neon-green transition-all hover:bg-neon-green hover:text-pure-black md:inline-flex"
             >
               Login
@@ -124,11 +124,11 @@ export function Navbar({ variant = "marketing" }: NavbarProps) {
                     </Link>
                   ))}
                   <Link
-                    href="/"
+                    href="/login"
                     onClick={() => setOpen(false)}
-                    className="mt-4 rounded-sm border border-white/10 px-4 py-3 text-center text-xs uppercase tracking-widest text-outline"
+                    className="rounded-sm border border-neon-green/40 px-4 py-3 text-center font-display text-xs uppercase tracking-widest text-neon-green"
                   >
-                    Main site
+                    Login
                   </Link>
                 </nav>
               </SheetContent>
