@@ -10,6 +10,7 @@ import {
   YAxis,
 } from "recharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { formatPkr, formatPkrCompact } from "@/lib/format-currency";
 
 interface RevenueChartProps {
   data: { month: string; revenue: number; members?: number }[];
@@ -41,11 +42,14 @@ export function RevenueChart({
               <XAxis dataKey="month" tick={{ fontSize: 12, fill: "#b9cacb" }} />
               <YAxis
                 tick={{ fontSize: 12, fill: "#b9cacb" }}
-                tickFormatter={(v) => `$${(v / 1000).toFixed(0)}k`}
+                tickFormatter={(v) => formatPkrCompact(Number(v))}
               />
               <Tooltip
                 formatter={(value) => [
-                  `$${Number(value).toLocaleString()}`,
+                  formatPkr(Number(value), {
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  }),
                   "Revenue",
                 ]}
                 contentStyle={{

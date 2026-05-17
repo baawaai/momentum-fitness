@@ -4,7 +4,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "basic",
     name: "Essential",
-    price: 49,
+    price: 6000,
     period: "/month",
     description: "Perfect for self-guided training with full gym access.",
     features: [
@@ -17,7 +17,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "pro",
     name: "Momentum Pro",
-    price: 89,
+    price: 10000,
     period: "/month",
     description: "Our most popular plan for serious fitness enthusiasts.",
     features: [
@@ -32,7 +32,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "elite",
     name: "Elite Performance",
-    price: 149,
+    price: 12000,
     period: "/month",
     description: "Premium coaching and 24/7 access for peak performers.",
     features: [

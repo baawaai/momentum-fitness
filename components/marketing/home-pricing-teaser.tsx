@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PRICING_PLANS } from "@/data/pricing";
 import { FadeIn } from "@/components/motion/fade-in";
+import { formatPkr } from "@/lib/format-currency";
 import { cn } from "@/lib/utils";
 
 export function HomePricingTeaser() {
@@ -35,7 +36,7 @@ export function HomePricingTeaser() {
                   {plan.name}
                 </h3>
                 <p className="mt-4 font-display text-4xl font-black text-electric-blue">
-                  ${plan.price}
+                  {formatPkr(plan.price)}
                   <span className="text-base font-normal text-on-surface-variant">
                     {plan.period}
                   </span>

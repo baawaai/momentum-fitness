@@ -1,15 +1,18 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import { PageHeader } from "@/components/marketing/page-header";
 import { ContactForm } from "@/components/marketing/contact-form";
 import { SiteContainer } from "@/components/layout/site-container";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Card, CardContent } from "@/components/ui/card";
+import { GOOGLE_MAPS_LOCATION_URL } from "@/data/site";
 
 const CONTACT_INFO = [
   {
     icon: MapPin,
     title: "Visit Us",
     detail: "2847 Performance Blvd, Austin, TX 78701",
+    mapsHref: GOOGLE_MAPS_LOCATION_URL,
   },
   {
     icon: Phone,
@@ -49,6 +52,16 @@ export default function ContactPage() {
                         <p className="mt-1 text-sm text-muted-foreground">
                           {item.detail}
                         </p>
+                        {"mapsHref" in item && item.mapsHref ? (
+                          <Link
+                            href={item.mapsHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-3 inline-flex text-sm font-medium text-primary underline-offset-4 hover:underline"
+                          >
+                            Directions on Google Maps
+                          </Link>
+                        ) : null}
                       </div>
                     </CardContent>
                   </Card>

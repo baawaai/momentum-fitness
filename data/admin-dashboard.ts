@@ -1,4 +1,5 @@
 import type { AttendanceRecord, DashboardStat, Member } from "@/types";
+import { formatPkrCompact } from "@/lib/format-currency";
 
 export const ADMIN_STATS: DashboardStat[] = [
   {
@@ -9,7 +10,7 @@ export const ADMIN_STATS: DashboardStat[] = [
   },
   {
     label: "Monthly Revenue",
-    value: "$142K",
+    value: formatPkrCompact(142000),
     change: "+5.4% vs last month",
     trend: "up",
   },

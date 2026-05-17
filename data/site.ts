@@ -60,11 +60,15 @@ export const ABOUT_VALUES = [
   },
 ];
 
+/** Google Maps listing for the physical studio — source of truth for directions */
+export const GOOGLE_MAPS_LOCATION_URL =
+  "https://maps.app.goo.gl/McdKpsTHi1P1o8mJ8";
+
 export const FOOTER_LINKS = {
   company: [
     { label: "Privacy", href: "/privacy" },
     { label: "Terms", href: "/terms" },
-    { label: "Location", href: "/contact" },
+    { label: "Location", href: "/location" },
     { label: "Contact", href: "/contact" },
   ],
   dashboards: [

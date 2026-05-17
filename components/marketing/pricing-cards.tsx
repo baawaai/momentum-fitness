@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { PRICING_PLANS } from "@/data/pricing";
+import { formatPkr } from "@/lib/format-currency";
 import { cn } from "@/lib/utils";
 
 interface PricingCardsProps {
@@ -33,7 +34,7 @@ export function PricingCards({ showAll = true }: PricingCardsProps) {
               <h3 className="text-lg font-semibold">{plan.name}</h3>
               <p className="text-sm text-muted-foreground">{plan.description}</p>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-4xl font-bold">${plan.price}</span>
+                <span className="text-4xl font-bold">{formatPkr(plan.price)}</span>
                 <span className="text-muted-foreground">{plan.period}</span>
               </div>
             </CardHeader>

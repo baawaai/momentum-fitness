@@ -5,6 +5,7 @@ import { MaterialIcon } from "@/components/ui/material-icon";
 import { SHOP_CATEGORIES, SHOP_PRODUCTS } from "@/data/shop";
 import { FadeIn } from "@/components/motion/fade-in";
 import { cn } from "@/lib/utils";
+import { formatPkr } from "@/lib/format-currency";
 import { useState } from "react";
 
 export function ShopContent() {
@@ -40,13 +41,13 @@ export function ShopContent() {
         <input
           type="range"
           min={0}
-          max={200}
-          defaultValue={100}
+          max={50000}
+          defaultValue={25000}
           className="h-1 w-full appearance-none rounded-full bg-surface-container accent-neon-green outline-none"
         />
         <div className="mt-4 flex justify-between text-sm">
-          <span>$0</span>
-          <span>$200+</span>
+          <span>{formatPkr(0)}</span>
+          <span>{formatPkr(50000)}+</span>
         </div>
       </aside>
 
@@ -107,7 +108,7 @@ export function ShopContent() {
                   </p>
                   <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
                     <span className="text-headline-md font-bold text-neon-green">
-                      ${product.price.toFixed(2)}
+                      {formatPkr(product.price)}
                     </span>
                     <button
                       type="button"

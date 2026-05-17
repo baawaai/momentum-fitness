@@ -6,6 +6,7 @@ import {
   USER_PROFILE,
 } from "@/data/user-dashboard";
 import { Button } from "@/components/ui/button";
+import { formatPkr } from "@/lib/format-currency";
 
 export const metadata = { title: "Billing" };
 
@@ -61,7 +62,10 @@ export default function UserBillingPage() {
                   </div>
                   <div className="flex items-center gap-6">
                     <span className="font-display text-lg font-bold text-neon-green">
-                      ${inv.amount.toFixed(2)}
+                      {formatPkr(inv.amount, {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2,
+                      })}
                     </span>
                     <span className="text-label-caps text-neon-green">
                       {inv.status}
