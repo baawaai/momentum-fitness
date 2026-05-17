@@ -1,0 +1,140 @@
+You are working on Momentum Fitness, a premium gym and fitness website UI built with Next.js, TypeScript, Tailwind CSS, ShadCN UI, and Google Stitch designs.
+
+IMPORTANT:
+
+- This project currently uses ONLY frontend
+- UI designs are created using Google Stitch
+- Maintain Stitch-generated design consistency
+- Do NOT redesign existing layouts unnecessarily
+- Follow the same spacing, typography, colors, and component patterns from Stitch
+- Extend existing design system carefully
+
+## Current Project Scope
+
+Frontend only project.
+
+## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- ShadCN UI
+- Lucide React
+- Framer Motion
+
+## Design System Rules
+
+The project uses Google Stitch generated UI.
+
+When generating code:
+
+- Match existing Stitch layout structure
+- Keep same design language
+- Reuse existing section styles
+- Reuse existing card styles
+- Reuse existing spacing system
+- Reuse typography scale
+- Reuse button variants
+- Reuse existing shadows and border radius
+- Avoid inconsistent UI patterns
+
+## UI Style
+
+Momentum Fitness should feel:
+
+- Modern
+- Premium
+- Athletic
+- Energetic
+- Minimal
+- Professional
+
+## Pages
+
+- Home
+- About
+- Pricing
+- Trainers
+- Contact
+- Gallery
+- FAQ
+- Terms
+- Privacy
+
+## Dashboard UI
+
+Frontend-only dashboard using mock data.
+
+### Admin Dashboard
+
+- Overview UI
+- User Management UI
+- Membership Management UI
+- Trainer Management UI
+- Attendance UI
+- Financial UI
+- Analytics UI
+
+### User Dashboard
+
+- Membership Overview UI
+- Workout Progress UI
+- Attendance History UI
+- Trainer Booking UI
+- Profile Settings UI
+
+## Component Rules
+
+- Create reusable components
+- Keep components modular
+- Follow existing Stitch component structure
+- Avoid creating unnecessary new design patterns
+- Extract reusable sections
+- Keep components clean and scalable
+
+## Styling Rules
+
+- Use Tailwind CSS only
+- Avoid inline styles
+- Use cn() utility
+- Maintain design consistency
+- Keep spacing balanced
+- Use subtle gradients
+- Keep modern hover states
+- Maintain dark mode support
+
+## Animation Rules
+
+- Use Framer Motion carefully
+- Keep animations subtle
+- Smooth hover transitions
+- Avoid excessive motion
+
+## Responsive Rules
+
+- Mobile-first approach
+- Responsive on all screen sizes
+- Preserve Stitch responsiveness
+- Avoid breaking layouts
+
+## Frontend Data Rules
+
+- Use mock data
+- Use constants/data files
+- Simulate realistic UI states
+- Add loading skeletons when needed
+
+## Code Quality
+
+- Production-ready frontend code
+- Clean architecture
+- Reusable UI sections
+- Maintainable structure
+- Type-safe components
+
+## Important
+
+- Preserve Stitch design consistency
+- Extend existing UI instead of replacing it
+- Keep premium fitness brand aesthetics
+- Focus only on frontend implementation

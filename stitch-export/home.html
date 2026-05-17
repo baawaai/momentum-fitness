@@ -1,0 +1,219 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Momentum Fitness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "outline": "#849495",
+                        "on-primary-fixed-variant": "#004f54",
+                        "tertiary-container": "#dcd9d8",
+                        "secondary-fixed-dim": "#abd600",
+                        "on-tertiary": "#313030",
+                        "inverse-primary": "#006970",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "primary-fixed-dim": "#00dbe9",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353534",
+                        "on-error": "#690005",
+                        "on-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "primary-container": "#00f0ff",
+                        "status-error": "#FF3E3E",
+                        "on-tertiary-container": "#5f5e5e",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "electric-blue": "#00F0FF",
+                        "tertiary": "#f8f5f5",
+                        "primary-fixed": "#7df4ff",
+                        "pure-black": "#000000",
+                        "surface-variant": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed": "#161e00",
+                        "on-primary-fixed": "#002022",
+                        "on-secondary": "#283500",
+                        "primary": "#dbfcff",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#3c4d00",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "charcoal-grey": "#121212",
+                        "on-background": "#e5e2e1",
+                        "neon-green": "#CCFF00",
+                        "secondary": "#ffffff",
+                        "surface-tint": "#00dbe9",
+                        "inverse-on-surface": "#313030",
+                        "surface-dim": "#131313",
+                        "on-primary": "#00363a",
+                        "secondary-container": "#c3f400",
+                        "on-secondary-container": "#556d00",
+                        "on-primary-container": "#006970",
+                        "outline-variant": "#3b494b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-surface-variant": "#b9cacb",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#c3f400",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter-desktop": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "display-lg": ["80px", { "lineHeight": "88px", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; }
+        .hero-gradient { background: linear-gradient(180deg, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 100%); }
+        .glass-card { background: rgba(28, 27, 27, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-charcoal-grey/95 backdrop-blur-md dark:bg-charcoal-grey/95 border-b border-white/10 shadow-[0_0_15px_rgba(0,240,255,0.1)]">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto md:px-margin-mobile">
+<div class="font-headline-xl text-headline-xl italic font-black text-electric-blue dark:text-electric-blue">
+                MOMENTUM
+            </div>
+<nav class="hidden md:flex gap-8 items-center font-headline-md text-headline-md uppercase tracking-tighter">
+<a class="text-electric-blue border-b-2 border-electric-blue pb-1 hover:scale-105 transition-transform duration-200 tracking-widest" href="#">Home</a>
+<a class="text-secondary hover:text-electric-blue transition-colors duration-300 hover:scale-105 tracking-widest" href="#services">Classes</a>
+<a class="text-secondary hover:text-electric-blue transition-colors duration-300 hover:scale-105 tracking-widest" href="#trainers">Trainers</a>
+<a class="text-secondary hover:text-electric-blue transition-colors duration-300 hover:scale-105 tracking-widest" href="#schedule">Schedule</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-secondary font-headline-md text-headline-md uppercase tracking-tighter hover:text-electric-blue transition-colors">LOGIN</button>
+<button class="bg-electric-blue text-pure-black font-headline-md text-headline-md uppercase tracking-tighter px-6 py-2 hover:shadow-[0_0_15px_#00F0FF] transition-shadow duration-300 hover:bg-cyan-400 active:scale-95 transition-all">JOIN NOW</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 w-full h-full bg-surface-container-high" data-alt="A high-intensity, cinematic wide shot of a premium modern gym interior bathed in dramatic, moody lighting. Heavy steel free weights and high-tech cardio equipment are silhouetted against deep obsidian backgrounds. Occasional streaks of vibrant electric blue and neon green LED lighting cut through the darkness, emphasizing a raw, authoritative, and high-performance atmosphere. The scene is spacious and energetic, avoiding any visual clutter." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtXWVKzy0pjquZr6-EoWljMNyjntzDlyWgZuk5drgrq7JjTKEqSB0JFeacmUvDGrWc1Ip8sOynGFXB325Sg_h31NzoZVvup7Glyh1J5UHvhv791CZyRVeWW4j2-hTCy1GMVW_6CRUMZZUhxyGBh4jQWs3ojfIojZ07I6i-UG8XIntQmWYHFtOlNlDjY1Xk5XVc_aAXVYflOZSiXJ50PM92bt1Ies7lMJ6ChKz2wdQlWlLtV-iIdBE6S7o9PxrTZuS4hopm3sW5i3Y5'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-pure-black/60"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mt-20">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-secondary uppercase italic mb-6 drop-shadow-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    ENGINEERED FOR <br><span class="text-electric-blue">PERFORMANCE</span>
+</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-10 text-on-surface">
+                    Push past your limits in a high-contrast environment designed for professional athletics and relentless progress.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-electric-blue text-pure-black font-headline-xl text-[20px] uppercase px-8 py-4 hover:shadow-[0_0_25px_#00F0FF] transition-all duration-300 font-bold hover:bg-cyan-400 active:scale-95">
+                        START YOUR TRIAL
+                    </button>
+<button class="bg-transparent border-2 border-neon-green text-neon-green font-headline-xl text-[20px] uppercase px-8 py-4 hover:bg-neon-green/10 transition-all duration-300 font-bold hover:bg-neon-green hover:text-pure-black active:scale-95">
+                        VIEW PROGRAMS
+                    </button>
+</div>
+</div>
+</section>
+<!-- Services / Bento Grid -->
+<section class="py-[160px] px-margin-mobile md:px-margin-desktop bg-charcoal-grey" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-xl text-headline-xl text-secondary uppercase mb-4 border-l-4 border-electric-blue pl-4">Core Disciplines</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Master your physique with our specialized training protocols.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop auto-rows-[300px]">
+<!-- Item 1: Span 2 cols -->
+<div class="md:col-span-2 relative group overflow-hidden border border-white/5 bg-surface-container" data-alt="A focused, intense close-up of a muscular athlete lifting heavy iron plates in a dark gym. The lighting highlights the sweat and muscle definition against a deep, pure black backdrop. An electric blue ambient glow subtly illuminates the edge of the weight plates, reinforcing a premium, high-contrast fitness aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZlf22NKDWiSEobj7_ouwEvwwamPW5TN8Zbc-z9f2-bvU8mDklamJ5PzwNrHHPWU1Mfi2L8B7ngleJfY2dRz80_jmgENxg5kh4Boq7Z4RU5Inxuw2LLk_xDTdJUmIL15RqESPmnGl9IuO1IivSP0UVTnNdxsxaU3gMcbE8DhZuLnZIFRngtHxykjqlSMKokqYof1cmzBfiu8RJLWBUx3ONY3lTJtHYhwGyhQoopnEn9nM32si0-0qevibFNwYiO5ak9225AvEG37Bt'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-pure-black/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-neon-green text-pure-black font-label-caps text-label-caps px-3 py-1 mb-3">ELITE</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-2 drop-shadow-md">Personal Training</h3>
+<p class="font-body-md text-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-white font-medium">One-on-one coaching tailored to explosive athletic performance.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative group overflow-hidden border border-white/5 bg-surface-container" data-alt="A wide shot of a high-energy group fitness class in a spacious studio. Silhouettes of participants are seen performing dynamic movements. The room is dark, illuminated by striking, sharp lines of white and electric blue LED strips across the ceiling, creating an authoritative, modern, and motivating atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkPGRueh3omKE2rhqmX0tYPv-kQkzldlZTinAzxoH5pJezxW4rvquys1FZ90ZTjLuOSfPxY4BW-WtdqDHSaBNi3WqLzaN7WBv9t-VuH_4_ScFHmTHwW-3AJh01BvwNZH31F2xmwaMcBjLsx8oQAV7gAgIMXZnlTUl8HGv2nCdivns7-xJONFM2mNKfpCebAXGszpp9ZijP5Qe-yuy7ElY2eSZg8ASCcPkzYxltfhZvy0ATH7IUkYcLzcVzs5qWKSNfZ_gkR8jb9-T9'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-pure-black/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-2 drop-shadow-md">Group Classes</h3>
+<p class="font-body-md text-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-white font-medium">High-intensity functional training.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative group overflow-hidden border border-white/5 bg-surface-container" data-alt="A clean, minimalist flat-lay of premium sports nutrition supplements, including dark grey shaker bottles and protein powder tubs. The items rest on a matte black surface. A subtle, vibrant electric blue glow emanates from behind the products, adding depth and highlighting the high-performance supplement aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRgz0cySrbsLCegDxgbyFasI5VnXh7pMQekbl1MgGMK9IO-4WRUVQU_Mh5BYm0lv6Z8Yirm7Ed7gAHrJ6ks0jq0gTJuezuksNDX8TxB__vfzGsqm8xbOtJRwuuuz5ZeBAH3LG30hbCparZxDHXdB6KkO-9Kq6bfnPBdKnZiTs6pCYOi6IBEdpHzokk6Iqc_CRWMBegQjHWTUSBrktIRHcOSA4VvnAnu8AafVnwhefVKMa3IOffB3YqZ9Td5XV62XXyJR9hlxjX0b6m'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-t from-pure-black via-pure-black/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="inline-block bg-electric-blue text-pure-black font-label-caps text-label-caps px-3 py-1 mb-3">NEW</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-2 drop-shadow-md">Nutrition</h3>
+<p class="font-body-md text-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 text-white font-medium">Precision fueling strategies.</p>
+</div>
+</div>
+<!-- Item 4: Span 2 cols -->
+<div class="md:col-span-2 relative group overflow-hidden border border-white/5 bg-surface-container flex items-center justify-center p-8">
+<div class="text-center z-10 relative">
+<span class="material-symbols-outlined text-[64px] text-electric-blue mb-4 block" style="font-variation-settings: 'FILL' 1;">timer</span>
+<h3 class="font-headline-md text-headline-md text-secondary uppercase mb-2 drop-shadow-md">Open Gym Access</h3>
+<p class="font-body-md text-body-md max-w-md mx-auto text-white font-medium">24/7 access to our elite facility and specialized equipment.</p>
+</div>
+<div class="absolute inset-0 bg-electric-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-pure-black dark:bg-pure-black border-t border-white/10 w-full relative bottom-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-margin-mobile gap-base max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-electric-blue italic font-black">
+                MOMENTUM
+            </div>
+<nav class="flex gap-6 font-body-md text-body-md">
+<a class="text-outline hover:text-secondary transition-colors duration-300" href="#">Privacy</a>
+<a class="text-outline hover:text-secondary transition-colors duration-300" href="#">Terms</a>
+<a class="text-outline hover:text-secondary transition-colors duration-300" href="#">Location</a>
+<a class="text-neon-green hover:text-neon-green transition-opacity duration-300" href="#">Contact</a>
+</nav>
+<div class="font-body-md text-body-md text-on-surface-variant text-sm">
+                © 2024 MOMENTUM FITNESS. ENGINEERED FOR PERFORMANCE.
+            </div>
+</div>
+</footer>
+
+
+</body></html>
