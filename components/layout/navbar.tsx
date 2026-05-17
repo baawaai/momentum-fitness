@@ -45,7 +45,7 @@ export function Navbar({ variant = "marketing" }: NavbarProps) {
               {SITE_NAME}
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-on-surface-variant">
-              Fitness Lab
+              Fitness
             </span>
           </Link>
 
